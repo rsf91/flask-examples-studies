@@ -23,12 +23,16 @@
         <label for="f0">Forward Price (F0):</label>
         <input type="text" name="f0" required><br><br>
 
+        <label for="t_expire">Tempo até Expiração (T):</label>
+        <input type="text" name="t_expire" required><br><br>
+
         <button type="submit">Calcular</button>
     </form>
 
-    {% if vol_smile %}
-    <h2>Resultado:</h2>
-    <img src="{{ url_for('static', filename='vol_smile.png') }}" alt="Volatility Smile">
+    {% if vol_smile%}
+        <h2>Resultado:</h2>
+        <img src="/static/vol_smile.png" alt="Volatility Smile">
+
     {% endif %}
 </body>
 </html>
